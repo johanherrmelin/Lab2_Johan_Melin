@@ -23,7 +23,7 @@ ShapeCounterAndMisc(listOfShapes);
 Shape3DVolume(listOfShapes);
 Console.WriteLine();
 Console.WriteLine();
-Console.WriteLine($"Avarege area of all shapes (rounded to two decimal places) is: {areaOfShapes / 20:f2}");
+Console.WriteLine($"Avarege area of all shapes (rounded to two decimal places) is: {areaOfShapes / listOfShapes.Count:f2}");
 Console.WriteLine($"The total perimeter, (circumference, rounded to two decimal places), of all triangles in the list is: {triangleCircum:f2}");
 Console.WriteLine($"The 3D shape with the most volume has a volume of {biggestVolume}");
 Console.WriteLine(MostAppearedShape());
