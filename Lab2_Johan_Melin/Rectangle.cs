@@ -56,7 +56,7 @@ namespace System.Numerics
 
         public override string ToString()
         {
-            if (_isSquare == false)
+            if (!_isSquare)
             {
                 return $"Rectangle @ {_center}: width = {_width} and height =  {_height}. The area of the Rectangle is {_area}. Is it a square: {_isSquare}";
             }

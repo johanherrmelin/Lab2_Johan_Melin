@@ -21,7 +21,7 @@
         {
             _center = new Vector3(center, 0f);
             _radius = Math.Abs(radius);
-            _area = MathF.PI * (_radius * _radius);
+            _area = MathF.PI * MathF.Pow(_radius, 2);
             _diameter = _radius * 2;
             _circumference = _diameter * MathF.PI;
 
@@ -29,7 +29,7 @@
 
         public override string ToString()
         {
-            return $"Circle    @ {_center}: r = {_radius}. The area of the circle is {_area} and the diameter is {_diameter}";
+            return $"Circle    @({_center.X:f2}, {_center.Y:f2}): r = {_radius:f2}. The area of the circle is {_area:f2} and the diameter is {_diameter:f2}";
         }
     }
 }

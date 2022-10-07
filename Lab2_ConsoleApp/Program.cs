@@ -1,7 +1,6 @@
 ﻿using System.Numerics;
 
 
-
 List<Shape> listOfShapes = new List<Shape>();
 List<Shape3D> listOfShapes3D = new List<Shape3D>();
 List<int> listOfCounters = new List<int>();
@@ -23,8 +22,9 @@ WriteOutShapes(listOfShapes);
 ShapeCounterAndMisc(listOfShapes);
 Shape3DVolume(listOfShapes);
 Console.WriteLine();
-Console.WriteLine($"Avarege area of all shapes (rounded to two decimal places) is: {(float)Math.Round((areaOfShapes / 20) * 100f) / 100f}");
-Console.WriteLine($"The total perimeter, (circumference, rounded to two decimal places), of all triangles in the list is: {(float)Math.Round(triangleCircum * 100f) / 100f}");
+Console.WriteLine();
+Console.WriteLine($"Avarege area of all shapes (rounded to two decimal places) is: {areaOfShapes / 20:f2}");
+Console.WriteLine($"The total perimeter, (circumference, rounded to two decimal places), of all triangles in the list is: {triangleCircum:f2}");
 Console.WriteLine($"The 3D shape with the most volume has a volume of {biggestVolume}");
 Console.WriteLine(MostAppearedShape());
 
@@ -76,6 +76,7 @@ void WriteOutShapes(List<Shape> aListOfShapes)
     foreach (Shape shape in listOfShapes)
     {
         Console.WriteLine(shape);
+        
         areaOfShapes += shape.Area;
 
     }
@@ -83,15 +84,14 @@ void WriteOutShapes(List<Shape> aListOfShapes)
 
 }
 
-void Shape3DVolume (List<Shape> listOf3Dshapes)
+void Shape3DVolume (List<Shape> listOfshapes)
 {
-    var filteredArray = listOf3Dshapes.Where(shaper => shaper is Shape3D shape3d).ToArray();
+    var filteredArray = listOfshapes.OfType<Shape3D>().ToArray();
     
-
-    foreach (Shape3D shaper in filteredArray)
+    foreach (Shape3D shape3D in filteredArray)
     {
-        if (shaper.Volume > biggestVolume)
-        biggestVolume = shaper.Volume;
+        if (shape3D.Volume > biggestVolume)
+        biggestVolume = shape3D.Volume;
        
     }
     
@@ -128,25 +128,23 @@ void ShapeCounterAndMisc(List<Shape> aListOfShapes)
         }
         else if (shape is Rectangle rectangle)
         {
-            if (rectangle.Square == true)
+            if (rectangle.Square)
             {
                 squareCounter++;
             }
-            else if (rectangle.Square == false)
+            else
             {
-
                 rectangleCounter ++;
-
             }
 
         }
         else if (shape is Cuboid cuboid)
         {
-            if (cuboid.Cube == true)
+            if (cuboid.Cube)
             {
                 cubeCounter++;
             }
-            else if (cuboid.Cube == false)
+            else
             {
                 cuboidCounter++;
 

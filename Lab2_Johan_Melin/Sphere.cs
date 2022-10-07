@@ -22,7 +22,7 @@ namespace System.Numerics
         {
             _center = center;
             _radius = Math.Abs(radius);
-            _volume =   (4/3) * MathF.PI * MathF.Pow(_radius, 3);
+            _volume =   (4.0f/3.0f) * MathF.PI * MathF.Pow(_radius, 3);
             _area = 4 * MathF.PI * MathF.Pow(_radius, 2);
 
         }

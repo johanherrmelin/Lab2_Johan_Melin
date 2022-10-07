@@ -11,8 +11,8 @@
 
         public static float NextDouble(Random rand, double minValue, double maxValue, int decimalPlaces)
         {
-            double randNumber = rand.NextDouble() * (maxValue - minValue) + minValue;
-            return float.Parse(randNumber.ToString("f" + decimalPlaces));
+            return (float)(rand.NextDouble() * (maxValue - minValue) + minValue);
+            
         }
 
         public static float RandomFloat()
@@ -30,7 +30,7 @@
             int randShape = rand.Next(0, 7);
             Vector2 vec2 = new Vector2(position.X, position.Y);
 
-            // Slumpad tirangel med uträknad p3.
+           
             float P1XCoordinate = RandomFloat();
             float P1YCoordinate = RandomFloat();
             float P2XCoordinate = RandomFloat();
