@@ -62,7 +62,7 @@ namespace System.Numerics
             }
             else
             {
-                return $"Square    @ {_center}: width = {_width} and height =  {_height}. The area of the Square is {_area}. Is it a square: {_isSquare}";
+                return $"Square    @ {_center}: width = {_width:f2} and height =  {_height:f2}. The area of the Square is {_area:f2}. Is it a square: {_isSquare:f2}";
             }
         }
     }

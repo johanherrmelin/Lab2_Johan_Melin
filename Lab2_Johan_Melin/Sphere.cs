@@ -29,7 +29,7 @@ namespace System.Numerics
 
         public override string ToString()
         {
-            return $"Sphere    @ {_center}: r = {_radius}. The volume of the sphere is {_volume} and the area is {_area}";
+            return $"Sphere    @ {_center}: r = {_radius:f2}. The volume of the sphere is {_volume:f2} and the area is {_area:f2}";
         }
 
     }

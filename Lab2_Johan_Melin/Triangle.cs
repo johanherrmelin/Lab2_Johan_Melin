@@ -47,7 +47,7 @@ namespace System.Numerics
         }
         public override string ToString()
         {
-            return $"Triangle  @ {_center}: with P1 = {_P1}, P2 = {_P2} and P3 = {_P3}. Area is {Area} and the perimeter is {Circumference}";
+            return $"Triangle  @ {_center}: with P1 = {_P1:f2}, P2 = {_P2:f2} and P3 = {_P3:f2}. Area is {Area:f2} and the perimeter is {Circumference:f2}";
         }
 
 

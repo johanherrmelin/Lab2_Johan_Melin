@@ -51,7 +51,7 @@ namespace System.Numerics
 
             if (_isCube == false)
             {
-                return $"Cuboid    @ {_center}: W = {_width}, H = {_height}, D = {_depth}. Volume is: {Volume}. Is it a cube: {_isCube}";
+                return $"Cuboid    @ {_center}: W = {_width:f2}, H = {_height:f2}, D = {_depth:f2}. Volume is: {Volume:f2}. Is it a cube: {_isCube}";
             }
             else
             {
