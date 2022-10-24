@@ -112,17 +112,8 @@
     }
 
 
-    public abstract class Shape2D : Shape
-    {
-        public abstract float Circumference
-        { get; }
-    }
+  
 
-    public abstract class Shape3D : Shape
-    {
-        public abstract float Volume
-        { get; }
 
-    }
 
 }

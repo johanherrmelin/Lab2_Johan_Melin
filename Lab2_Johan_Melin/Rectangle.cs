@@ -30,7 +30,7 @@ namespace System.Numerics
             _width = Math.Abs(size.X);
             _height = Math.Abs(size.Y);
             _area = _height * _width;
-            _circumference = 2 * _height + _width;
+            _circumference = 2 * _height + 2 * _width;
             _isSquare = false;
 
             if (_width == _height)

@@ -41,7 +41,7 @@ namespace System.Numerics
             _sideZX = MathF.Sqrt(MathF.Pow((p3.X - p1.X), 2) + MathF.Pow((p3.Y - p1.Y), 2));
 
             _center = new Vector3(centerX, centerY, 0f);
-            _area = triHeight * triWidth / 2;
+            _area = Math.Abs(0.5f * (p1.X * (p2.Y - p3.Y) + p2.X * (p3.Y - p1.Y) + p3.X * (p1.Y - p2.Y)));
             _circumference = _sideXY + _sideYZ + _sideZX; 
 
         }
